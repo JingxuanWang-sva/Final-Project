@@ -82,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
  }
 
 #two {
-	background-color:#C1D911;
+	background-color:#74C195;
 	color: #ffffff;
 	height: 100vh;
     max-height: 100vh;
@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .tlinks{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
 .four-features{
-	background-color: #29344e;
+	background-color: #366682;
 	border-radius: 8px;
 /*	margin: 30px 35px;*/
 }
@@ -1428,7 +1428,7 @@ textarea#message {
     width:100%;
     height:100%;
     overflow:visible;
-    background: #fff url('../images/preloader.gif') no-repeat center center;
+    background: #fff url('"../images/loading.gif"') no-repeat center center;
 }
 
 html {
@@ -1439,15 +1439,106 @@ html {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	align-items: center;
 	
 }
 
 .restaurant h4 {
 	font-size: 15px;
 	text-align: center;
+	color: white;
+	background-color: #87C8D0;
+	border-radius: 20px;
+	border-width: thick;
 	
 }
 
 
+#myImg {
+	transition: 0.5s;
+}
 
 
+#myImg:hover {
+	opacity:0.7;
+	cursor: pointer;
+}
+
+
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.9); 
+}
+
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+
+.Imgclose {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.Imgclose:hover,
+.Imgclose:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
